@@ -4,8 +4,8 @@ var extend = require('extend');
 var FeedbackQueue = function() {};
 var container;
 var body = document.querySelector('body');
-var containerTemplate = require('./container.mustache');
-var singleTemplate = require('./single.mustache');
+var containerTemplate = '<div class="feedback-queue js-feedback-queue"><div class="feedback-queue-position js-feedback-queue-position"></div></div>';
+var singleTemplate = '<div class="feedback-queue-single js-feedback-queue-single is-{{type}}"><span class="feedback-queue-single-cross">&times;</span>{{message}}</div>';
 
 /**
  * create and or return dom node
