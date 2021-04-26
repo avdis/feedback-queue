@@ -52,12 +52,12 @@ FeedbackQueue.prototype.create = function(options) {
 
   // timeout for removal
   setTimeout(function() {
-    singleMessage.remove();
+    singleMessage.parentNode.removeChild(singleMessage)
   }, options.life);
 
   // click message to remove
   singleMessage.addEventListener('click', function() {
-    this.remove();
+    this.parentNode.removeChild(this)
   });
 };
 
